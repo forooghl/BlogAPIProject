@@ -12,7 +12,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import React, { useState } from "react";
 import { useMutation, useQueryClient } from "react-query";
 import axios from "axios";
-import AddPost from "./AddPost";
+import PostForm from "./PostForm";
 import { Keyboard } from "react-native";
 
 const PostDetails = ({ route, navigation }) => {
@@ -90,7 +90,7 @@ const PostDetails = ({ route, navigation }) => {
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                     <View className="flex-1 m-4">
                         <MaterialIcons name="close" size={34} color="#333" onPress={() => setIsOpen(false)} />
-                        <AddPost
+                        <PostForm
                             submitHandler={editHandler}
                             postContent={{
                                 author: route.params.author,
